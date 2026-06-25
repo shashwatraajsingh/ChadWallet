@@ -18,7 +18,7 @@ export default function Navigation({ solid }: NavigationProps) {
     >
       {/* Logo */}
       <a href="/" className="flex items-center">
-        <img src="/assets/logo/logo1.png" alt="ChadWallet Logo" className="h-8 object-contain" />
+        <img src="/assets/logo/logo1.png" alt="ChadWallet Logo" className="h-10 md:h-12 object-contain" />
       </a>
 
       {/* Desktop Right Side */}
