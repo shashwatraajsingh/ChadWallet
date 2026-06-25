@@ -116,15 +116,11 @@ export default function HeroSection() {
         className="absolute inset-0 z-0"
         style={{ opacity: 0 }}
       >
-        <video
-          autoPlay
-          muted
-          loop
-          playsInline
+        <img
+          src="/background.png"
+          alt="Background"
           className="w-full h-full object-cover"
-        >
-          <source src="/assets/video/chadwallet.mp4" type="video/mp4" />
-        </video>
+        />
         {/* Gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#050511] via-transparent to-transparent opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#050511]/80 via-transparent to-transparent" />
@@ -134,9 +130,9 @@ export default function HeroSection() {
       {/* Floating App Preview */}
       <img
         ref={astronautRef}
-        src="/assets/flow/launch-4.png"
+        src="/hero-mockup.png"
         alt="App Preview"
-        className="absolute z-[1] w-[200px] md:w-[280px] lg:w-[320px] bottom-[8%] md:bottom-[10%] left-1/2 -translate-x-1/2 drop-shadow-[0_20px_60px_rgba(0,0,0,0.5)] rounded-3xl"
+        className="absolute z-[1] w-[550px] md:w-[720px] lg:w-[1000px] -bottom-[9%] md:-bottom-[15%] lg:-bottom-[2%] left-1/2 -translate-x-1/2 drop-shadow-[0_20px_60px_rgba(0,0,0,0.5)] rounded-3xl"
         style={{ opacity: 0 }}
       />
 
@@ -145,11 +141,7 @@ export default function HeroSection() {
         {/* Brand Wordmark */}
         <h1
           ref={wordmarkRef}
-          className="text-[56px] md:text-[80px] lg:text-[100px] font-extrabold text-text-primary tracking-[-0.04em] leading-[0.95]"
-          style={{
-            opacity: 0,
-            textShadow: '0 4px 60px rgba(0,0,0,0.5)',
-          }}
+          className="text-[72px] md:text-[100px] lg:text-[140px] font-extrabold text-text-primary tracking-[-0.04em] leading-[0.95] drop-shadow-[0_4px_60px_rgba(0,0,0,0.5)]"
         >
           ChadWallet
         </h1>
