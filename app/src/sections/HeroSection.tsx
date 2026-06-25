@@ -149,7 +149,8 @@ export default function HeroSection() {
         {/* Headline */}
         <h2
           ref={headlineRef}
-          className="text-[32px] md:text-[42px] lg:text-[48px] font-semibold text-text-primary tracking-[-0.02em] mt-6 font-['Aeonik']"
+          className="text-[32px] md:text-[42px] lg:text-[48px] font-semibold text-text-primary tracking-[-0.02em] mt-6"
+          style={{ opacity: 0 }}
         >
           where traders become legends.
         </h2>
@@ -157,7 +158,8 @@ export default function HeroSection() {
         {/* Subheadline */}
         <p
           ref={subRef}
-          className="text-base md:text-lg text-text-secondary max-w-[540px] mx-auto mt-4 font-['Aeonik']"
+          className="text-base md:text-lg text-text-secondary max-w-[540px] mx-auto mt-4"
+          style={{ opacity: 0 }}
         >
           From memecoins to viral tokens, trade any crypto in seconds.
         </p>

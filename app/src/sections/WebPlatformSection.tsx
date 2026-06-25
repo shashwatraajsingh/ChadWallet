@@ -136,8 +136,8 @@ export default function WebPlatformSection() {
             style={{ opacity: 0 }}
           >
             <img
-              src="/nexus-desktop-mockup.jpg"
-              alt="Nexus trading platform on desktop"
+              src="/tradingPg.png"
+              alt="ChadWallet trading platform on desktop"
               className="w-full h-auto"
             />
           </div>
@@ -145,14 +145,16 @@ export default function WebPlatformSection() {
           {/* Phone Mockup - overlapping */}
           <div
             ref={phoneRef}
-            className="absolute -bottom-8 right-4 md:right-12 w-[140px] md:w-[200px] lg:w-[240px]"
+            className="absolute -bottom-16 md:-bottom-24 lg:-bottom-32 -right-16 md:-right-32 lg:-right-48 w-[420px] md:w-[600px] lg:w-[720px]"
             style={{ opacity: 0, transform: 'rotate(-8deg)' }}
           >
-            <img
-              src="/nexus-mobile-mockup.png"
-              alt="Nexus mobile app"
-              className="w-full h-auto drop-shadow-[0_20px_60px_rgba(0,0,0,0.6)]"
-            />
+            <div className="animate-float">
+              <img
+                src="/PhoneTrad.png"
+                alt="ChadWallet mobile app"
+                className="w-full h-auto drop-shadow-[0_20px_60px_rgba(0,0,0,0.6)]"
+              />
+            </div>
           </div>
         </div>
       </div>
