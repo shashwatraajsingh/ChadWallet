@@ -11,13 +11,13 @@ export default function Navigation({ solid }: NavigationProps) {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 h-[72px] flex items-center justify-between px-6 md:px-12 transition-all duration-500 ${solid
-          ? 'bg-[rgba(5,5,17,0.85)] backdrop-blur-[16px]'
-          : 'bg-transparent'
+        ? 'bg-[rgba(5,5,17,0.85)] backdrop-blur-[16px]'
+        : 'bg-transparent'
         }`}
     >
       {/* Logo */}
       <a href="/" className="flex items-center">
-        <img src="/assets/logo/light.png" alt="ChadWallet Logo" className="h-8 object-contain" />
+        <img src="/assets/logo/logo2.png" alt="ChadWallet Logo" className="h-12 object-contain" />
       </a>
 
       {/* Desktop Right Side */}

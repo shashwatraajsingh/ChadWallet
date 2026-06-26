@@ -49,7 +49,7 @@ function App() {
   }, []);
 
   return (
-    <div ref={mainRef} className="min-h-screen bg-bg-primary font-geist">
+    <div ref={mainRef} className="min-h-screen bg-bg-primary font-aeonik">
       <Navigation solid={navSolid} />
       <HeroSection />
       <WebPlatformSection />

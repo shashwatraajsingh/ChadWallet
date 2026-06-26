@@ -73,6 +73,7 @@ module.exports = {
       },
       fontFamily: {
         geist: ['Geist', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        aeonik: ['Aeonik', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
       },
       keyframes: {
         "accordion-down": {
