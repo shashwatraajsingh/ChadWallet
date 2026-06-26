@@ -25,7 +25,9 @@ export default function Navigation({ solid }: NavigationProps) {
         {/* App Store Badges */}
         <div className="flex items-center gap-3">
           <a
-            href="#"
+            href="https://apps.apple.com/us/app/chadwallet/id6757367474"
+            target="_blank"
+            rel="noopener noreferrer"
             className="h-[36px] px-3 flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-lg hover:bg-white/20 transition-all duration-200"
           >
             <svg viewBox="0 0 24 24" className="w-4 h-4 fill-white">
@@ -37,7 +39,9 @@ export default function Navigation({ solid }: NavigationProps) {
             </span>
           </a>
           <a
-            href="#"
+            href="https://play.google.com/store/apps/details?id=xyz.chadwallet.www"
+            target="_blank"
+            rel="noopener noreferrer"
             className="h-[36px] px-3 flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/10 rounded-lg hover:bg-white/20 transition-all duration-200"
           >
             <svg viewBox="0 0 24 24" className="w-4 h-4 fill-white">
