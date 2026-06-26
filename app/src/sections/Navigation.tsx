@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, LogOut } from 'lucide-react';
+import { usePrivy } from '@privy-io/react-auth';
 
 interface NavigationProps {
   solid: boolean;
@@ -7,6 +8,16 @@ interface NavigationProps {
 
 export default function Navigation({ solid }: NavigationProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { login, logout, authenticated, user } = usePrivy();
+
+  const getUserDisplay = () => {
+    if (!user) return '';
+    if (user.email) return user.email.address.split('@')[0];
+    if (user.google) return user.google.email?.split('@')[0] || 'Google User';
+    if (user.apple) return user.apple.email?.split('@')[0] || 'Apple User';
+    if (user.wallet) return `${user.wallet.address.slice(0, 6)}...${user.wallet.address.slice(-4)}`;
+    return 'User';
+  };
 
   return (
     <header
@@ -54,10 +65,28 @@ export default function Navigation({ solid }: NavigationProps) {
           </a>
         </div>
 
-        {/* Login */}
-        <button className="h-[36px] px-5 flex items-center justify-center text-sm font-semibold text-text-primary bg-white/10 backdrop-blur-md border border-white/10 rounded-lg hover:bg-white/20 hover:scale-[1.02] transition-all duration-200">
-          Login
-        </button>
+        {/* Login / Profile */}
+        {authenticated ? (
+          <div className="flex items-center gap-3">
+            <span className="text-sm font-medium text-text-primary hidden lg:block">
+              {getUserDisplay()}
+            </span>
+            <button
+              onClick={logout}
+              className="h-[36px] px-4 flex items-center justify-center gap-2 text-sm font-semibold text-text-primary bg-white/10 backdrop-blur-md border border-white/10 rounded-lg hover:bg-white/20 hover:scale-[1.02] transition-all duration-200"
+            >
+              <LogOut size={16} />
+              Logout
+            </button>
+          </div>
+        ) : (
+          <button
+            onClick={login}
+            className="h-[36px] px-5 flex items-center justify-center text-sm font-semibold text-text-primary bg-white/10 backdrop-blur-md border border-white/10 rounded-lg hover:bg-white/20 hover:scale-[1.02] transition-all duration-200"
+          >
+            Login
+          </button>
+        )}
       </div>
 
       {/* Mobile Hamburger */}
@@ -75,9 +104,22 @@ export default function Navigation({ solid }: NavigationProps) {
             <a href="#" className="text-text-secondary hover:text-text-primary transition-colors">
               Download App
             </a>
-            <button className="w-full px-5 py-3 text-sm font-semibold text-text-primary bg-white/8 border border-white/10 rounded-xl">
-              Login
-            </button>
+            {authenticated ? (
+              <button
+                onClick={logout}
+                className="w-full flex items-center justify-center gap-2 px-5 py-3 text-sm font-semibold text-text-primary bg-white/8 border border-white/10 rounded-xl hover:bg-white/10 transition-colors"
+              >
+                <LogOut size={16} />
+                Logout
+              </button>
+            ) : (
+              <button
+                onClick={login}
+                className="w-full px-5 py-3 text-sm font-semibold text-text-primary bg-white/8 border border-white/10 rounded-xl hover:bg-white/10 transition-colors"
+              >
+                Login
+              </button>
+            )}
           </div>
         </div>
       )}
