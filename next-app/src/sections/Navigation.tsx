@@ -1,3 +1,4 @@
+'use client';
 import { useState } from 'react';
 import { Menu, X, LogOut } from 'lucide-react';
 import { usePrivy } from '@privy-io/react-auth';
