@@ -10,7 +10,7 @@ createRoot(document.getElementById('root')!).render(
     <PrivyProvider
       appId={import.meta.env.VITE_PRIVY_APP_ID || 'your_privy_app_id_here'}
       config={{
-        loginMethods: ['apple', 'google'],
+        loginMethods: ['email', 'wallet', 'apple', 'google'],
         appearance: {
           theme: 'dark',
           accentColor: '#676FFF',
